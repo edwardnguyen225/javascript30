@@ -1,0 +1,56 @@
+:root {
+  --bright-yellow: #ffc600;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: url(/background.jpg) bottom center;
+  background-size: cover;
+  color: white;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  margin: 0.75rem;
+  padding: 1rem 0.5rem;
+  border: 0.3rem solid black;
+  background: rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+
+  transition: all 0.05s ease;
+}
+
+.key > kbd {
+  font-size: 2.5rem;
+}
+
+.key > .sound {
+  color: var(--bright-yellow);
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: var(--bright-yellow);
+  box-shadow: 0 0 1rem var(--bright-yellow);
+}
