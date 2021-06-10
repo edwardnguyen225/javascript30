@@ -1,0 +1,54 @@
+:root {
+  --spacing: 10px;
+  --blur: 10px;
+  --base-color: #ffc600;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #193549;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 5em;
+}
+
+h1 > .js {
+  text-transform: uppercase;
+  color: var(--base-color);
+}
+
+.controls {
+  margin-bottom: 2.5rem;
+}
+
+.controls > label {
+  font-size: 1.75rem;
+}
+
+.controls > input {
+  width: 100px;
+}
+
+img {
+    padding: var(--spacing);
+    background-color: var(--base-color);
+    filter: blur(var(--blur));
+}
