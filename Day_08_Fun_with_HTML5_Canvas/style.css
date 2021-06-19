@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+}
+
+.draw {
+  margin: 0.5rem;
+  width: 100;
+  height: 96vh;
+}
+
+.draw-header {
+  display: block;
+
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#draw {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.25rem solid;
+  border-radius: 10px;
+}
