@@ -14,5 +14,6 @@ window.addEventListener("keyup", (e) => {
   if (pressedKeys.join("").includes(secretCode)) {
     console.log("DING DING DING!!! 🎉🎉🎉");
     console.log(`You found "${secretCode}"`);
+    cornify_add();
   }
 });
