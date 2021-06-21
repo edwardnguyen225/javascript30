@@ -1,7 +1,7 @@
-const canvas = document.querySelector("#draw");
-const ctx = canvas.getContext("2d");
-ctx.lineJoin = "round";
-ctx.lineCap = "round";
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
 
 let isDrawing = false;
 let lastX = 0;
@@ -10,7 +10,7 @@ let hue = 0;
 let increaseLineWidth = true;
 const maxLineWidth = 50;
 
-function draw(e) {
+function draw (e) {
   if (!isDrawing) return;
   console.log(e);
   ctx.beginPath();
@@ -27,9 +27,9 @@ function draw(e) {
   ctx.lineWidth = increaseLineWidth ? ctx.lineWidth + 1 : ctx.lineWidth - 1;
 }
 
-canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("mousedown", (e) => {
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
-canvas.addEventListener("mouseup", () => (isDrawing = false));
+canvas.addEventListener('mouseup', () => (isDrawing = false));

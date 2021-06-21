@@ -1,10 +1,10 @@
-const hourHand = document.querySelector(".hour-hand");
-const minHand = document.querySelector(".min-hand");
-const secHand = document.querySelector(".sec-hand");
+const hourHand = document.querySelector('.hour-hand');
+const minHand = document.querySelector('.min-hand');
+const secHand = document.querySelector('.sec-hand');
 
-function setDay() {
+function setDay () {
   const now = new Date();
-  
+
   const sec = now.getSeconds();
   const secDeg = (sec / 60) * 360;
   secHand.style.transform = `rotate(${secDeg}deg)`;

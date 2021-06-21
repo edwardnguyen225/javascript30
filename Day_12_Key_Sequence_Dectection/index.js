@@ -1,7 +1,7 @@
 const pressedKeys = [];
-const secretCode = "hirito";
+const secretCode = 'hirito';
 
-window.addEventListener("keyup", (e) => {
+window.addEventListener('keyup', (e) => {
   const newKey = e.key;
   console.log(newKey);
   pressedKeys.push(newKey);
@@ -11,9 +11,8 @@ window.addEventListener("keyup", (e) => {
   );
   console.log(pressedKeys);
 
-  if (pressedKeys.join("").includes(secretCode)) {
-    console.log("DING DING DING!!! 🎉🎉🎉");
+  if (pressedKeys.join('').includes(secretCode)) {
+    console.log('DING DING DING!!! 🎉🎉🎉');
     console.log(`You found "${secretCode}"`);
-    cornify_add();
   }
 });
