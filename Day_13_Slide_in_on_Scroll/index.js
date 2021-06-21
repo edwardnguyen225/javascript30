@@ -18,12 +18,12 @@ const sliderImgs = document.querySelectorAll('.slide-in');
 
 function updateSlide() {
     sliderImgs.forEach((sliderImg => {
-        const slideInAt = window.scrollY + window.innerHeight - sliderImg.height / 2;
+        const slideInAt = window.scrollY + window.innerHeight - sliderImg.height / 4;
         const imgBottom = sliderImg.offsetTop + sliderImg.height;
-        const isHalfShown = slideInAt > sliderImg.offsetTop;
+        const isAQuaterShown = slideInAt > sliderImg.offsetTop;
         const isNotScrollPast = window.scrollY < imgBottom;
 
-        if (isHalfShown && isNotScrollPast) {
+        if (isAQuaterShown && isNotScrollPast) {
             sliderImg.classList.add('active');
         } else {
             sliderImg.classList.remove('active');
